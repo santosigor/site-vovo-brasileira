@@ -68,12 +68,6 @@ h3 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	&.bg-1 {
- 		background-color: #795d5f;
-		background-image: url('https://picsum.photos/1785/714/?image=551');
-		min-height: 400px;
-		opacity: 0.65;
-	}
 }
 
 section {
@@ -115,6 +109,10 @@ section {
  	&.vb-redes-sociais {
  		background: #fff;
  		padding: 40px 0;
+		text-align: center;
+ 	}
+ 	&.vb-fotos {
+		
  	}
  	&.vb-receita-da-vovo {
  		background: #fff;

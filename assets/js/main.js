@@ -22,7 +22,28 @@ $(document).ready(function() {
         items:1
       }
     }
-	})
+	});
+
+	$('#vbCarouselCardapio').owlCarousel({
+		nav: true,
+		dots: false,
+		margin: 10,
+    responsive:{
+      0:{ items:1 },
+      768:{ items:2 },
+      1024:{ items:3 }
+    }
+	});
+
+	$('#vbCarouselFotos').owlCarousel({
+		nav: true,
+		dots: false,
+    responsive:{
+      0:{
+        items:1
+      }
+    }
+	});
 
   // Ancora
 	$('.acr').on('click', function(e) {
