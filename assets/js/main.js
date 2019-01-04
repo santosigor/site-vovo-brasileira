@@ -27,7 +27,7 @@ $(document).ready(function() {
 	$('#vbCarouselCardapio').owlCarousel({
 		nav: true,
 		dots: false,
-		margin: 10,
+		margin: 20,
     responsive:{
       0:{ items:1 },
       768:{ items:2 },
