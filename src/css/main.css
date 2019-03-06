@@ -1,7 +1,12 @@
 @charset "UTF-8";
 body {
   font-family: Lato, Arial, Helvetica, sans-serif;
-  min-width: 320px; }
+  min-width: 320px;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/bg.png"); }
 
 b, strong {
   font-weight: normal;
@@ -11,8 +16,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   letter-spacing: 0.175em;
   line-height: 1.25;
-  margin: 0 0 1.5rem 0;
-  color: #ffffff; }
+  margin: 0 0 1.5rem 0; }
 
 ul, ol {
   margin: 0;
@@ -59,10 +63,12 @@ h2, h3 {
   margin: 0;
   text-align: center; }
 
-h3 {
+h2 {
+  font-weight: 600;
   margin-bottom: 40px;
-  color: #e0182a;
-  font-size: 22px; }
+  color: #e0182a; }
+  h2 span {
+    font-weight: 800; }
 
 .vb-parallax {
   position: relative;
@@ -146,12 +152,17 @@ section.vb-redes-sociais {
 section.vb-receita-da-vovo {
   background: #fff;
   padding: 80px 0; }
+  section.vb-receita-da-vovo h4 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    padding: 5px 0; }
 
 section.vb-contato {
   background-color: #ec8128;
-  background-image: url("https://picsum.photos/1785/714/?image=112"); }
+  background-image: url("../images/bg-contato.jpg"); }
   section.vb-contato .vb-contato-content {
-    background-color: rgba(236, 129, 40, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 80px 0; }
     section.vb-contato .vb-contato-content ul {
       list-style: none;
@@ -195,8 +206,6 @@ section.vb-contato {
       letter-spacing: 0.0375em;
       line-height: 2;
       margin-bottom: 20px; }
-      section.vb-contato .vb-contato-content form input[type="text"]:focus, section.vb-contato .vb-contato-content form input[type="email"]:focus, section.vb-contato .vb-contato-content form input[type="tel"]:focus, section.vb-contato .vb-contato-content form select:focus, section.vb-contato .vb-contato-content form textarea:focus {
-        border-color: #57262c; }
     section.vb-contato .vb-contato-content form textarea {
       padding: 0.75rem 1rem; }
     section.vb-contato .vb-contato-content form a {
@@ -220,6 +229,9 @@ section.vb-contato {
       color: #fff; }
       section.vb-contato .vb-contato-content form a:hover {
         background-color: #e64756; }
+
+.vb-error {
+  border-color: #e64756 !important; }
 
 footer {
   padding: 40px;
