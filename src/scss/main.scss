@@ -123,6 +123,14 @@ section {
  	&.vb-sobre {
  		background: #e6e7e9;
  		padding: 80px 0;
+ 		img {
+ 			float: left;
+ 			position: relative;
+	    margin: 0 30px 20px 0;
+	    top: 6px;
+	    width: 100%;
+	    max-width: 460px;
+ 		}
  	}
  	&.vb-cardapio {
  		.title-bg {
@@ -199,11 +207,19 @@ section {
  	&.vb-receita-da-vovo {
  		background: #fff;
  		padding: 80px 0;
+ 		img {
+ 			float: left;
+	    margin: 0 30px 20px 0;
+	    width: 100%;
+	    max-width: 460px;
+ 		}
  		h4 {
- 			border-top: 1px solid rgba(0,0,0,.1);
- 			border-bottom: 1px solid rgba(0,0,0,.1);
  			margin-bottom: 1rem;
- 			padding: 5px 0;
+ 			font-weight: 600;
+ 			background: #795d5f;
+ 			color:#ffffff;
+ 			padding: 5px 10px;
+ 			display: inline-block;
  		}
  	}
  	&.vb-contato {
@@ -211,6 +227,7 @@ section {
  		background-image: url('../images/bg-contato.jpg');
  		.vb-contato-content {
  			background-color: rgba(0, 0, 0, 0.6);
+		  	background-image: url('../images/mask.png');
  			padding: 80px 0;
 	 		ul {
 	 			list-style: none;

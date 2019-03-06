@@ -91,6 +91,13 @@ section.vb-carousel #vbCarousel .owl-dots {
 section.vb-sobre {
   background: #e6e7e9;
   padding: 80px 0; }
+  section.vb-sobre img {
+    float: left;
+    position: relative;
+    margin: 0 30px 20px 0;
+    top: 6px;
+    width: 100%;
+    max-width: 460px; }
 
 section.vb-cardapio .title-bg {
   position: relative;
@@ -152,17 +159,25 @@ section.vb-redes-sociais {
 section.vb-receita-da-vovo {
   background: #fff;
   padding: 80px 0; }
+  section.vb-receita-da-vovo img {
+    float: left;
+    margin: 0 30px 20px 0;
+    width: 100%;
+    max-width: 460px; }
   section.vb-receita-da-vovo h4 {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
-    padding: 5px 0; }
+    font-weight: 600;
+    background: #795d5f;
+    color: #ffffff;
+    padding: 5px 10px;
+    display: inline-block; }
 
 section.vb-contato {
   background-color: #ec8128;
   background-image: url("../images/bg-contato.jpg"); }
   section.vb-contato .vb-contato-content {
     background-color: rgba(0, 0, 0, 0.6);
+    background-image: url("../images/mask.png");
     padding: 80px 0; }
     section.vb-contato .vb-contato-content ul {
       list-style: none;

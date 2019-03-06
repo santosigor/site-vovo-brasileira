@@ -32,6 +32,16 @@ $(document).ready(function() {
     }
 	});
 
+  $('#vbCarouselReceitas').owlCarousel({
+    nav: true,
+    dots: false,
+    responsive:{
+      0:{
+        items:1
+      }
+    }
+  });
+
   // Ancora
 	$('.acr').on('click', function(e) {
 	  e.preventDefault();
