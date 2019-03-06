@@ -1,11 +1,6 @@
 body {
 	font-family: Lato, Arial, Helvetica, sans-serif;
 	min-width: 320px;
-	background-attachment: fixed;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-image: url('../images/bg.png');
 }
 
 b, strong {
@@ -58,6 +53,13 @@ header {
  		display: block;
  		text-align: center;
  		background: #e0182a;
+ 		&.fixed {
+ 			position: fixed;
+ 			width: 100%;
+ 			top:0;
+ 			left: 0;
+ 			z-index: 8;
+ 		}
  		ul {
  			margin: 0;
  			padding: 0;
@@ -97,6 +99,35 @@ h2 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.owl-carousel {
+	.owl-nav {
+		margin: 0;
+		button.owl-next, button.owl-prev {
+			font-size: 0;
+			padding: 0;
+			background-color: transparent;
+			outline: none;
+			position: absolute;
+			width: 40px;
+			height: 40px;
+		}
+		button.owl-next {
+			right: 0;
+			background: url("data:image/svg+xml;charset=UTF-8, %3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='306px' height='306px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve' fill='%23795d5f'%3e%3cg%3e%3cg id='chevron-right'%3e%3cpolygon points='94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 '/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e ");
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+		}
+		button.owl-prev {
+			left: 0;
+			background: url("data:image/svg+xml;charset=UTF-8, %3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='306px' height='306px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve' fill='%23795d5f'%3e%3cg%3e%3cg id='keyboard-arrow-left'%3e%3cpolygon points='247.35,270.3 130.05,153 247.35,35.7 211.65,0 58.65,153 211.65,306 '/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e ");
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+		}
+	}
 }
 
 section {
@@ -147,7 +178,7 @@ section {
 		  	left: 0;
 		  	width: 100%;
 		  	height: 100%;
-		  	background-color: rgba(0, 0, 0,0.4);
+		  	background-color: rgba(0,0,0,0.4);
 		  	background-image: url('../images/mask.png');
 		  }
 		  h2, p {
@@ -181,13 +212,9 @@ section {
 					}
 				}
 				.owl-nav {
-					margin: 0;
+					padding: 50px 0 100px 0;
 					button.owl-next, button.owl-prev {
-						font-size: 100px;
-						padding: 0;
-						background-color: transparent;
-						outline: none;
-						color: #e0182a;
+						position: inherit;
 					}
 				}
 			}
@@ -202,7 +229,47 @@ section {
 		}
  	}
  	&.vb-fotos {
-		
+		#vbCarouselFotos {
+			.owl-item {
+				.item {
+					position: relative;
+					&:before {
+						content: '';
+				    position: absolute;
+				    left: 0;
+				    top: 0;
+				    background: rgba(0,0,0,0.5);
+				    width: 100%;
+				    height: 100%;
+						border-right: 1px solid #fff;
+						-moz-transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
+				    -webkit-transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
+				    -ms-transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
+				    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
+					}
+				}
+				&.active.center {
+					.item {
+						&:before {
+				    	background: transparent;
+						}
+					}
+				}
+			}
+			.owl-nav {
+				button.owl-next, button.owl-prev {
+					top: calc(50% - 20px);
+				}
+				button.owl-next {
+					right: 80px;
+					background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='306px' height='306px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve' fill='%23ffffff'%3e%3cg%3e%3cg id='chevron-right'%3e%3cpolygon points='94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 '/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e ");
+				}
+				button.owl-prev {
+					left: 80px;
+					background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='306px' height='306px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve' fill='%23ffffff'%3e%3cg%3e%3cg id='keyboard-arrow-left'%3e%3cpolygon points='247.35,270.3 130.05,153 247.35,35.7 211.65,0 58.65,153 211.65,306 '/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e ");
+				}
+			}
+		}
  	}
  	&.vb-receita-da-vovo {
  		background: #fff;
@@ -223,27 +290,14 @@ section {
  		}
  		#vbCarouselReceitas {
 			.owl-nav {
-				margin: 0;
 				button.owl-next, button.owl-prev {
-					font-size: 0;
-					padding: 0;
-					background-color: transparent;
-					outline: none;
-					position: absolute;
-					width: 40px;
-					height: 40px;
 					top: calc(50% - 20px);
-			    background-position: center center;
-			    background-repeat: no-repeat;
-			    background-size: contain;
 				}
 				button.owl-next {
 					right: -80px;
-					background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='306px' height='306px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve' fill='%23795d5f'%3e%3cg%3e%3cg id='chevron-right'%3e%3cpolygon points='94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 '/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e ");
 				}
 				button.owl-prev {
 					left: -80px;
-					background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='306px' height='306px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve' fill='%23795d5f'%3e%3cg%3e%3cg id='keyboard-arrow-left'%3e%3cpolygon points='247.35,270.3 130.05,153 247.35,35.7 211.65,0 58.65,153 211.65,306 '/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e ");
 				}
 			}
 		}

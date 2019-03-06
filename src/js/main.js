@@ -2,6 +2,8 @@
 
 $(document).ready(function() {
 
+  // fixedNav();
+
 	$('#vbCarousel').owlCarousel({
     loop:true,
     responsive:{
@@ -25,10 +27,11 @@ $(document).ready(function() {
 	$('#vbCarouselFotos').owlCarousel({
 		nav: true,
 		dots: false,
+    loop: true,
+    center: true,
     responsive:{
-      0:{
-        items:1
-      }
+      0:{ items:1 },
+      768:{ items:2 }
     }
 	});
 
@@ -56,7 +59,21 @@ $(document).ready(function() {
     $("html, body").animate({scrollTop: $('.vb-contato').offset().top - 80}, 500);
   }
 
+  // $(window).scroll(function() {
+    
+  //   fixedNav();
+
+  // });
+
 });
+
+// function fixedNav() {
+//  if ($(this).scrollTop()>240) {
+//     $('header nav').addClass('fixed');
+//   } else {
+//     $('header nav').removeClass('fixed');
+//   }
+// }
 
 function Contato(){
 
