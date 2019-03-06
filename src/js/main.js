@@ -34,7 +34,6 @@ $(document).ready(function() {
 
   $('#vbCarouselReceitas').owlCarousel({
     nav: true,
-    dots: false,
     responsive:{
       0:{
         items:1

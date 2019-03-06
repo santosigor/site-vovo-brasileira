@@ -221,6 +221,32 @@ section {
  			padding: 5px 10px;
  			display: inline-block;
  		}
+ 		#vbCarouselReceitas {
+			.owl-nav {
+				margin: 0;
+				button.owl-next, button.owl-prev {
+					font-size: 0;
+					padding: 0;
+					background-color: transparent;
+					outline: none;
+					position: absolute;
+					width: 40px;
+					height: 40px;
+					top: calc(50% - 20px);
+			    background-position: center center;
+			    background-repeat: no-repeat;
+			    background-size: contain;
+				}
+				button.owl-next {
+					right: -80px;
+					background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='306px' height='306px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve' fill='%23795d5f'%3e%3cg%3e%3cg id='chevron-right'%3e%3cpolygon points='94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 '/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e ");
+				}
+				button.owl-prev {
+					left: -80px;
+					background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='306px' height='306px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve' fill='%23795d5f'%3e%3cg%3e%3cg id='keyboard-arrow-left'%3e%3cpolygon points='247.35,270.3 130.05,153 247.35,35.7 211.65,0 58.65,153 211.65,306 '/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e ");
+				}
+			}
+		}
  	}
  	&.vb-contato {
  		background-color: #ec8128;
@@ -313,8 +339,20 @@ section {
  	}
 }
 
+.owl-theme .owl-nav [class*=owl-]:hover {
+  color: inherit;
+}
+
 .vb-error {
 	border-color: #e64756 !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #795d5f;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: #bcaeaf;
 }
 
 footer {
