@@ -1,3 +1,7 @@
+html, body {
+	overflow-x: hidden;
+}
+
 body {
 	font-family: Lato, Arial, Helvetica, sans-serif;
 	min-width: 320px;
@@ -41,10 +45,16 @@ body {
 header {
  	padding-top: 30px;
  	background: #fff;
+ 	@media (max-width: 767.98px) {
+		border-bottom: 5px solid #e0182a;
+	}
  	h1 {
  		max-width: 300px;
  		margin: 0 auto;
  		margin-bottom: 30px;
+ 		@media (max-width: 767.98px) {
+			max-width: 150px;
+		}
  		img {
  			width: 100%;
  		}
@@ -53,6 +63,9 @@ header {
  		display: block;
  		text-align: center;
  		background: #e0182a;
+ 		@media (max-width: 767.98px) {
+			display: none;
+		}
  		&.fixed {
  			position: fixed;
  			width: 100%;
@@ -91,6 +104,9 @@ h2 {
  	span {
  		font-weight: 800;
  	}
+ 	@media (max-width: 767.98px) {
+		font-size: 1.5rem;
+	}
 }
 
 .vb-parallax {
@@ -99,6 +115,42 @@ h2 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.vb-modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  z-index: 99999;
+  @media (max-width: 575.98px) {
+		padding: 0 15px;
+	}
+  &__close {
+    position: absolute;
+    top: 40px;
+    left: calc(50% - 18px);
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='357px' height='357px' viewBox='0 0 357 357' style='enable-background:new 0 0 357 357;' xml:space='preserve' fill='%23e0182a'%3e%3cg%3e%3cg id='close'%3e%3cpolygon points='357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5 '/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e ");
+  }
+  &__content {
+  	margin-top: 120px;
+  	padding-bottom: 30px;
+  	overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+  }
 }
 
 .owl-carousel {
@@ -133,6 +185,16 @@ h2 {
 section {
  	&.vb-carousel {
  		#vbCarousel {
+ 			.item {
+				background-position: center center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+ 				height: 320px;
+ 				@media (max-width: 767.98px) {
+					// height: ;
+
+				}
+ 			}
  			.owl-dots {
  				position: absolute;
 		    margin-top: -36px;
@@ -154,6 +216,9 @@ section {
  	&.vb-sobre {
  		background: #e6e7e9;
  		padding: 80px 0;
+	 	@media (max-width: 575.98px) {
+			padding: 80px 15px;
+		}
  		img {
  			float: left;
  			position: relative;
@@ -167,6 +232,9 @@ section {
  		.title-bg {
  			position: relative;
  			padding: 80px 0 160px 0;
+		 	@media (max-width: 575.98px) {
+				padding: 80px 30px 160px 30px;
+			}
  			text-align: center;
  			background-color: #57262c;
 		  background-image: url('../images/IMG-20180427-WA0117.jpg');
@@ -187,27 +255,33 @@ section {
  		}
  		.vb-cardapio-items {
 			margin-top: -100px;
+			@media (max-width: 575.98px) {
+				padding: 0 15px;
+			}
 			#vbCarouselCardapio {
 				.item {
 					cursor: pointer;
-					span {
-						display: block;
-						position: relative;
-						background: #e0182a;
-						font-size: 22px;
-						color:#fff;
-						padding: 66px 15px 96px 15px;
-    				text-align: center;
-						&:before {
-							content: '+';
-					    position: absolute;
-					    font-size: 1.6rem;
-					    left: 0;
-					    bottom: 0;
-					    background: rgba(0,0,0,0.25);
-					    width: 100%;
-					    height: 44px;
-					    text-align: center;
+					a {
+						text-decoration: none;
+						span {
+							display: block;
+							position: relative;
+							background: #e0182a;
+							font-size: 22px;
+							color:#fff;
+							padding: 66px 15px 96px 15px;
+	    				text-align: center;
+							&:before {
+								content: '+';
+						    position: absolute;
+						    font-size: 1.6rem;
+						    left: 0;
+						    bottom: 0;
+						    background: rgba(0,0,0,0.25);
+						    width: 100%;
+						    height: 44px;
+						    text-align: center;
+							}
 						}
 					}
 				}
@@ -224,6 +298,9 @@ section {
  		background: #79626517;
  		padding: 80px 0;
 		text-align: center;
+	 	@media (max-width: 575.98px) {
+			padding: 80px 15px;
+		}
 		a {
 			color: #f47e31;
 		}
@@ -241,7 +318,6 @@ section {
 				    background: rgba(0,0,0,0.5);
 				    width: 100%;
 				    height: 100%;
-						border-right: 1px solid #fff;
 						-moz-transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
 				    -webkit-transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
 				    -ms-transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
@@ -263,10 +339,16 @@ section {
 				button.owl-next {
 					right: 80px;
 					background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='306px' height='306px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve' fill='%23ffffff'%3e%3cg%3e%3cg id='chevron-right'%3e%3cpolygon points='94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 '/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e ");
+					@media (max-width: 767.98px) {
+						right: 30px;
+					}
 				}
 				button.owl-prev {
 					left: 80px;
 					background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='306px' height='306px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve' fill='%23ffffff'%3e%3cg%3e%3cg id='keyboard-arrow-left'%3e%3cpolygon points='247.35,270.3 130.05,153 247.35,35.7 211.65,0 58.65,153 211.65,306 '/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e ");
+					@media (max-width: 767.98px) {
+						left: 30px;
+					}
 				}
 			}
 		}
@@ -274,6 +356,9 @@ section {
  	&.vb-receita-da-vovo {
  		background: #fff;
  		padding: 80px 0;
+	 	@media (max-width: 575.98px) {
+			padding: 80px 15px;
+		}
  		img {
  			float: left;
 	    margin: 0 30px 20px 0;
@@ -307,16 +392,24 @@ section {
  		background-image: url('../images/bg-contato.jpg');
  		.vb-contato-content {
  			background-color: rgba(0, 0, 0, 0.6);
-		  	background-image: url('../images/mask.png');
+		  background-image: url('../images/mask.png');
  			padding: 80px 0;
+		 	@media (max-width: 575.98px) {
+				padding: 80px 15px;
+			}
 	 		ul {
 	 			list-style: none;
 	    	padding-left: 0;
-	    	text-align: right;
 	    	margin: 0;
+	    	@media (min-width: 768px) {
+					text-align: right;
+				}
 	 			> li {
 	 				display: block;
-	 				margin: 0 0 3rem 0;
+	 				margin: 0 0 1.5rem 0;
+		    	@media (min-width: 768px) {
+	 					margin: 0 0 3rem 0;
+					}
 	 				padding-right: 15px;
 	 				color:#fff;
 	 				&:last-child {
@@ -331,10 +424,16 @@ section {
 	 					color: #fff;
 	 				}
 	 				ul {
+	 					@media (max-width: 767.98px) {
+		 					margin-bottom: 1.5rem;
+						}
 	 					li {
 	 						display: inline-block;
-	 						margin-left: 10px;
+	 						margin: 0 10px 10px 0;
 	 						padding-right: 0;
+	 						@media (min-width: 768px) {
+			 					margin: 0 0 0 10px;
+							}
 	 					}
 	 				}
 	 			}

@@ -65,6 +65,20 @@ $(document).ready(function() {
 
   // });
 
+  $('.vb-modal-open').click(function(e) {
+    e.preventDefault();
+    var modalOpen = $(this).attr('href');
+    $('.vb-modal').hide();
+    $(modalOpen).fadeIn('fast');
+    $('html, body').css('overflow','hidden');
+  });
+
+  $('.vb-modal__close').click(function(e) {
+    e.preventDefault();
+    $('html, body').css('overflow','');
+    $('.vb-modal').fadeOut('fast');
+  });
+
 });
 
 // function fixedNav() {
